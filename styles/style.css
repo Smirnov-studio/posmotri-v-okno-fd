@@ -9,6 +9,10 @@ html {
 }
 
 .page {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   inline-size: 1200px;
   block-size: 100%;
   margin: auto;
@@ -50,13 +54,6 @@ ol {
   background-color: #D9D9D9;
 }
 
-.page {
-  margin: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .content {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -74,10 +71,12 @@ ol {
   display: inherit;
   position: relative;
   width: 711px;
+  max-height: 386px;
 }
 
 .result__video {
   width: 100%;
+  max-height: 386px;
   object-fit: cover;
 }
 
@@ -98,6 +97,12 @@ ol {
 }
 
 .search-form__label {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: end;
+  gap: 5px;
+  width: fit-content;
   font-size: 18px;
   font-weight: 400;
   line-height: 21.6px;
@@ -118,15 +123,6 @@ ol {
   gap: 15px;
 }
 
-.search-form__label {
-  display: flex;
-  flex-direction: row;
-  align-items: end;
-  align-content: end;
-  gap: 5px;
-  width: fit-content;
-}
-
 .search-form__label:focus-within {
   outline: 1px solid #ffffff;
   outline-offset: 2px;
@@ -140,8 +136,8 @@ ol {
   line-height: 21.6px;
   color: #ffffff;
   background-color: transparent;
-  border-top: 1px solid #ffffff;
-  border-bottom: 1px solid #ffffff;
+  border-top: 1px solid currentColor;
+  border-bottom: 1px solid currentColor;
   border-left: none;
   border-right: none;
   appearance: none;
@@ -194,9 +190,9 @@ ol {
   color: #ffffff;
 }
 
-.search-form__label-text:hover {
+.search-form__label:hover .search-form__label-text { 
   text-decoration: underline;
-  text-underline-offset: 5px;
+  text-underline-offset: 4px;
 }
 
 /* кнопки, их стилизация в различных стотяниях */
@@ -207,7 +203,7 @@ ol {
   line-height: 21.6px;
   color: #ffffff;
   background-color: transparent;
-  border: 1px solid #ffffff;
+  border: 1px solid currentColor;
   cursor: pointer;
 }
 
@@ -242,8 +238,8 @@ ol {
   display: inherit;
   grid-template-rows: auto;
   gap: 26px;
-  width: auto;
-  height: auto;
+  width: 399px;
+  max-height: 530px;
 }
 
 .title {
@@ -254,7 +250,7 @@ ol {
   color: #ffffff;
   text-transform: uppercase;
   width: 259px;
-  height: 210px;
+  min-height: 210px;
 }
 
 .content__accent {
@@ -262,7 +258,27 @@ ol {
 }
 
 .content__card-link {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
   text-decoration: none;
+}
+
+.content__card-link_current {
+  background-color: #545050;
+}
+
+.content__card-link:active {
+  background-color: #545050;
+}
+
+.content__card-link:hover {
+  text-decoration: underline;
+  color: #ffffff;
+}
+
+.content__card-link:focus-visible {
+  outline: 1px solid #ffffff;
 }
 
 .content__video-card-title {
@@ -272,6 +288,10 @@ ol {
   line-height: 30px;
   color: #ffffff;
   text-transform: uppercase;
+  text-overflow: ellipsis; 
+  white-space: nowrap; 
+  overflow: hidden;
+  max-width: 196px;
 }
 
 .content__video-card-description {
@@ -290,7 +310,7 @@ ol {
   position: relative;
   overflow-y: auto;
   padding-top: 3px;
-  height: 307px;
+  height: 290px;
   width: 399px;
 }
 
@@ -304,6 +324,7 @@ ol {
   width: 390px;
   padding-right: 3px;
   padding-left: 3px;
+  width: 390px;
 }
 
 .content__video-card {
@@ -311,20 +332,7 @@ ol {
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: auto;
   cursor: pointer;
-}
-
-.content__video-card:active {
-  background-color: #545050;
-}
-
-.content__video-card:hover {
-  text-decoration: underline;
-  text-underline-offset: 5px;
-  color: #ffffff;
-}
-
-.content__video-card:focus-visible {
-  outline: 1px solid #ffffff;
+  width: 390px;
 }
 
 .content__video-card-description-container {
@@ -332,7 +340,7 @@ ol {
   flex-direction: column;
   gap: 6px;
   flex-grow: 0;
-  max-width: 195px;
+  max-width: 196px;
   max-height: 103px;
 }
 
@@ -343,6 +351,8 @@ ol {
 }
 
 .content__video-card-thumbnail {
+  object-position: center;
+  object-fit: cover;
   width: 194px;
   height: 103px;
 }
