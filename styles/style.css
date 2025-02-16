@@ -9,13 +9,13 @@ html {
 }
 
 .page {
-  margin: auto;
+  margin-left: 380px;
+  padding-bottom: 130px;
   display: flex;
   justify-content: center;
   align-items: center;
   inline-size: 1200px;
   block-size: 100%;
-  margin: auto;
   color: #fff;
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
@@ -81,6 +81,7 @@ ol {
 }
 
 .search-form {
+
   display: inherit;
   grid-template-columns: repeat(3, 1fr);
   align-items: end;
@@ -103,13 +104,15 @@ ol {
   align-content: end;
   gap: 5px;
   width: fit-content;
+  font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 21.6px;
-  color: #ffffff;
+  color: #ffffff
 }
 
 .search-form__fieldset-title {
+  font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 21.6px;
@@ -131,7 +134,8 @@ ol {
 /* Поле ввода города */
 .search-form__textfield {
   display: inline-block;
-  font-size: 16px;
+  font-family: "Fira Sans Condensed", sans-serif;
+  font-size: 18px;
   font-weight: 400;
   line-height: 21.6px;
   color: #ffffff;
@@ -184,6 +188,7 @@ ol {
 
 /* текст справа от чекбокса */
 .search-form__label-text {
+  font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 21.6px;
@@ -197,7 +202,9 @@ ol {
 
 /* кнопки, их стилизация в различных стотяниях */
 .button {
+  padding: 0;
   display: inline-block;
+  font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
   font-weight: 700;
   line-height: 21.6px;
@@ -239,7 +246,6 @@ ol {
   grid-template-rows: auto;
   gap: 26px;
   width: 399px;
-  max-height: 530px;
 }
 
 .title {
@@ -250,7 +256,6 @@ ol {
   color: #ffffff;
   text-transform: uppercase;
   width: 259px;
-  min-height: 210px;
 }
 
 .content__accent {
@@ -285,7 +290,7 @@ ol {
   font-family: "Oswald", "Arial", sans-serif;
   font-weight: 700;
   font-size: 30px;
-  line-height: 30px;
+  line-height: 25px;
   color: #ffffff;
   text-transform: uppercase;
   text-overflow: ellipsis; 
@@ -295,7 +300,7 @@ ol {
 }
 
 .content__video-card-description {
-  font-family: 'Fira Sans Condensed', sans-serif;
+  font-family: "Fira Sans Condensed", sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 16.2px;
@@ -309,9 +314,8 @@ ol {
   grid-gap: 30px;
   position: relative;
   overflow-y: auto;
-  padding-top: 3px;
-  height: 290px;
   width: 399px;
+  height: 290px;
 }
 
 .content__list {
@@ -341,7 +345,6 @@ ol {
   gap: 6px;
   flex-grow: 0;
   max-width: 196px;
-  max-height: 103px;
 }
 
 .content__video-card-title {
