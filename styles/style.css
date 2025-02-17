@@ -9,8 +9,7 @@ html {
 }
 
 .page {
-  margin-left: 380px;
-  padding-bottom: 130px;
+  margin: auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -59,6 +58,8 @@ ol {
   grid-template-columns: repeat(2, 1fr);
   gap: 30px;
   align-items: end;
+  justify-items: center;
+  inline-size: 1140px;
 }
 
 .result {
@@ -81,7 +82,6 @@ ol {
 }
 
 .search-form {
-
   display: inherit;
   grid-template-columns: repeat(3, 1fr);
   align-items: end;
@@ -290,7 +290,7 @@ ol {
   font-family: "Oswald", "Arial", sans-serif;
   font-weight: 700;
   font-size: 30px;
-  line-height: 25px;
+  line-height: 30px;
   color: #ffffff;
   text-transform: uppercase;
   text-overflow: ellipsis; 
@@ -328,7 +328,6 @@ ol {
   width: 390px;
   padding-right: 3px;
   padding-left: 3px;
-  width: 390px;
 }
 
 .content__video-card {
@@ -345,12 +344,6 @@ ol {
   gap: 6px;
   flex-grow: 0;
   max-width: 196px;
-}
-
-.content__video-card-title {
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
 }
 
 .content__video-card-thumbnail {
